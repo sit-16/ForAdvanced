@@ -1,5 +1,6 @@
 <Solution>
-  <Project Path="4.1.10.Одинаковые соседи/4.1.10.Одинаковые соседи.csproj" />
-  <Project Path="4.2.3.Цифра/4.2.3.Цифра.csproj" />
-  <Project Path="Strings/4.1.9.Strings.csproj" />
+  <Project Path="4.1.10.Одинаковые соседи/4.1.Strings.10.Одинаковые соседи.csproj" />
+  <Project Path="4.2.3.Цифра/4.2.Символы (сhar).03.Цифра.csproj" />
+  <Project Path="4.2.Символы (сhar).5.Буква в верхнем регистре/4.2.Символы (сhar).05.Буква в верхнем регистре.csproj" />
+  <Project Path="Strings/4.1.Strings.09.Склько раз.csproj" />
 </Solution>
