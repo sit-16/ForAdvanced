@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             int n = Convert.ToInt32(Console.ReadLine());
-            while (n > 10)
+            while (n >= 10)
             {
                 n = n / 10;
             }
