@@ -12,6 +12,10 @@
         public string LastName = "Неизвестная фамилия";
         public int Age = -1;
         public double Rating = 0.1;
+        public void PrintSmallInfo()
+        {
+            Console.WriteLine($"{LastName} {FirstName[0]}.");
+        }
     }
 
     internal class Program
@@ -19,7 +23,10 @@
         static void Main(string[] args)
         {
             var test = new School();
-            Console.WriteLine("Hello, World!");
+            var stud = new Student();
+            stud.FirstName = "Иосиф";
+            stud.LastName = "Дзеранов";
+            stud.PrintSmallInfo();
         }
     }
 }
