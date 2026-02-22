@@ -10,12 +10,15 @@
     { 
         public List<Dish> OrderedDishes;
         public double TotalPrice;
+        public DateTime OrderTime;
+        public string TableNumber;
     }
 
     public class Customer
     {
         public string FullName;
         public List<Order> Orders;
+        public string PhoneNumber;
     }
 
     public class Table
@@ -52,13 +55,25 @@
             Dish paparatSalad = new Dish { Name = "Салат «А-ля Папарать»" };
             Dish greekSalad = new Dish { Name = "Салат «Греческий»" };
 
+            //Order order = new Order();
+            //order.OrderedDishes = [pastaCarbonara, caesarSalad, paparatSalad, greekSalad];
+            //order.TotalPrice = 70.0;
+
+            //Customer customer = new Customer();
+            //customer.FullName = "Гость";
+            //customer.Orders = [order];
+
+
             Order order = new Order();
-            order.OrderedDishes = [pastaCarbonara, caesarSalad, paparatSalad, greekSalad];
-            order.TotalPrice = 70.0;
+            order.OrderedDishes = [pastaCarbonara];
+            order.TotalPrice = 16.9;
 
             Customer customer = new Customer();
-            customer.FullName = "Гость";
+            customer.FullName = "Артур";
             customer.Orders = [order];
+
+
+
         }
     }
 }
