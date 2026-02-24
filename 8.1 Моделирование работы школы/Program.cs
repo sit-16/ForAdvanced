@@ -48,7 +48,7 @@ namespace _8._1_Моделирование_работы_школы
 
         public void AddNewStudent(Student student)
         {
-            int nextN = Students.Count;
+            int nextN = Students.Count; // Нумерация новых учеников автоматическая
             Students.Add(nextN, student);
             Console.WriteLine($"Студент {student.FirstName} успешно добавлен в школу {Name}.");
         }
@@ -60,9 +60,10 @@ namespace _8._1_Моделирование_работы_школы
             if (!this.Students.ContainsKey(num)) return false;
             string lastName = Students[num].LastName;
             Students.Remove(num);
+            
             int i = 0;
             var tempStudents = new Dictionary<int, Student>();
-            foreach (var st in this.Students)
+            foreach (var st in this.Students) // Перенумерация словаря, чтобы дырок не было
             {
                 tempStudents.Add(i, st.Value);
                 i++;
@@ -114,9 +115,7 @@ namespace _8._1_Моделирование_работы_школы
                 {
                     Console.WriteLine($"Введите номер ученика");
                     while (!school.RemoveStudent(Console.ReadLine()))
-                    {
                         Console.WriteLine($"Введите номер ученика");
-                    }
                 }
             }
         }
