@@ -16,9 +16,17 @@
             this.Numerator = numerator;
             this.Denominator = denominator;
         }
+
+        public Fraction(int numerator) : this(numerator, 1)
+        { }
+
         public void Print()
         {
-            Console.WriteLine($"{this.Numerator}/{this.Denominator}");
+            this.Reduce();
+            if (this.Denominator == 1)
+                Console.WriteLine($"{this.Numerator}");
+            else
+                Console.WriteLine($"{this.Numerator}/{this.Denominator}");
         }
 
         public Fraction Sum(Fraction otherFraction)
@@ -73,6 +81,20 @@
             Fraction otherFraction = new Fraction(number, 1);
             return this.Devide(otherFraction);
         }
+
+        public void Reduce()
+        {
+            for (int i = this.Denominator; i > 1; i--)
+            {
+                if (this.Denominator % i == 0 && this.Numerator % i == 0)
+                {
+                    this.Denominator /= i;
+                    this.Numerator /= i;
+                    break;
+                }
+            }
+        }
+
     }
 
 
@@ -82,26 +104,28 @@
         static void Main(string[] args)
         {
             var fraction1 = new Fraction(1, 2);
-            fraction1.Print();
+            fraction1.Print(); // 1/2
             var fraction2 = new Fraction(1, 3);
-            fraction2.Print();
+            fraction2.Print(); // 1/3
             var fraction3 = fraction1.Sum(fraction2);
-            fraction3.Print();
+            fraction3.Print(); // 5/6
             var fraction4 = fraction1.Diference(fraction2);
-            fraction4.Print();
+            fraction4.Print(); // 1/6
             var fraction5 = fraction1.Multiply(fraction2);
-            fraction5.Print();
+            fraction5.Print(); // 1/6
             var fraction6 = fraction1.Devide(fraction2);
-            fraction6.Print();
+            fraction6.Print(); // 3/2
             Console.WriteLine("----");
             var fraction7 = fraction1.Sum(1);
-            fraction7.Print();
-            var fraction8 = fraction7.Diference(1);
-            fraction8.Print();
+            fraction7.Print(); // 3/2
+            var fraction8 = fraction1.Diference(1);
+            fraction8.Print(); // -1/2
             var fraction9 = fraction1.Multiply(2);
-            fraction9.Print();
+            fraction9.Print(); // 1
             var fraction10 = fraction1.Devide(2);
-            fraction10.Print();
+            fraction10.Print(); // 1/4
+            var fraction0 = new Fraction(3);
+            fraction0.Print(); // 3
         }
     }
 }
