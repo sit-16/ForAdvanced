@@ -65,6 +65,7 @@
   <Project Path="7.3 Ключевое слово this.08.Item/7.3 Ключевое слово this.08.Item.csproj" Id="cf6f5b21-ee26-4add-83c7-2c25fe44b09a" />
   <Project Path="7.3 Ключевое слово this.09.Equipment/7.3 Ключевое слово this.09.Equipment.csproj" Id="a842824d-ace8-4386-921e-12a10484d23a" />
   <Project Path="7.4 Инициализаторы объектов.04.Использование инициализатора/7.4 Инициализаторы объектов.04.Использование инициализатора.csproj" Id="1b62e550-e617-486e-b44d-2abef0a71daf" />
+  <Project Path="8.1 Моделирование работы школы/8.1 Моделирование работы школы.csproj" Id="02b9bd3d-9789-434b-a888-4c817fb48719" />
   <Project Path="ConsoleApp1/Скобки фигурные и квадратные.csproj" Id="a3959fb7-db03-42f0-863b-79c592cd8e1a" />
   <Project Path="Strings/4.1.Strings.09.Склько раз.csproj" />
 </Solution>
