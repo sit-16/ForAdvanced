@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace _8._3_Моделирование_онлайн_магазина
 {
