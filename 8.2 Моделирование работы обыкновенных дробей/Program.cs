@@ -11,7 +11,7 @@
         /// </summary>
         public int Denominator;
 
-        public Fraction(int numerator, int denominator) : this()
+        public Fraction(int numerator, int denominator): this()
         {
             this.Numerator = numerator;
             this.Denominator = denominator;
