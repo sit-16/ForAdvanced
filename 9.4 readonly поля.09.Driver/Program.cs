@@ -31,13 +31,33 @@
     {
         public static void Main()
         {
-            Driver driver = new Driver("Иван0", "Иванов0", 34);
-            Console.WriteLine($"Новый водитель: {driver.FirstName} {driver.LastName}, возраст: {driver.Age}");
+            //Driver driverA = new Driver("Иван", "Иванов", 34);
+            //Driver driverB = new Driver("Алексей", "Алексеев", 30);
+            //Car carA = new Car("A123KC", "Красный", driverA);
+            //Car carB = new Car("В321EM", "Белый", driverB);
+            //Console.WriteLine($"Автомобиль A: {carA.Number} {carA.Color} {carA.Driver.LastName}");
 
-            driver.FirstName = "Иван1";
-            driver.LastName = "Иванов1";
-            driver.Age = 30;
-            Console.WriteLine($"Новый водитель: {driver.FirstName} {driver.LastName}, возраст: {driver.Age}");
+            //carA.Color = carB.Color;
+            //carA.Number = carB.Number;
+            //carA.Driver = carB.Driver;
+            //Console.WriteLine($"Автомобиль A: {carA.Number} {carA.Color} {carA.Driver.LastName}");
+
+            Driver driverA = new Driver("Иван", "Иванов", 34);
+            Driver driverC = new Driver("Пётр", "Петров", 25);
+            Car carA = new Car("A123MP", "Красный", driverA);
+            Car carB = new Car("B456XC", "Синий", null);
+            Car carC = new Car("K789BA", "Белый", driverC);
+            Car[] cars = new Car[] { carA, carB, carC };
+            CarsDrivers(cars);
+        }
+
+        public static void CarsDrivers(Car[] cars)
+        {
+            foreach (var car in cars)
+            {
+                string driverLastName = car.Driver is null ? "Нет водителя" : car.Driver.LastName;
+                Console.WriteLine($"{car.Number}:{driverLastName}");
+            }
         }
     }
 }
