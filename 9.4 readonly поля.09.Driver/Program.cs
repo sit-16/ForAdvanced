@@ -14,18 +14,30 @@
             Age = age;
         }
     }
-    
+    public class Car
+    {
+        public string Number { get; set; }
+        public string Color { get; set; }
+        public Driver Driver { get; set; }
+        public Car(string number, string color, Driver driver)
+        {
+            this.Number = number;
+            this.Color = color; 
+            this.Driver = driver;
+        }
+    }
+
     internal class Program
     {
         public static void Main()
         {
             Driver driver = new Driver("Иван0", "Иванов0", 34);
-            Console.WriteLine($"Новый водитель: {driver.FirstName} {driver.LastName}, возраст: {driver.Age}, Id: {driver.Id}");
+            Console.WriteLine($"Новый водитель: {driver.FirstName} {driver.LastName}, возраст: {driver.Age}");
 
             driver.FirstName = "Иван1";
             driver.LastName = "Иванов1";
             driver.Age = 30;
-            Console.WriteLine($"Новый водитель: {driver.FirstName} {driver.LastName}, возраст: {driver.Age}, Id: {driver.Id}");
+            Console.WriteLine($"Новый водитель: {driver.FirstName} {driver.LastName}, возраст: {driver.Age}");
         }
     }
 }
