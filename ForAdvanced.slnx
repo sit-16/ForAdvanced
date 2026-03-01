@@ -73,6 +73,7 @@
   <Project Path="9.3 Свойства.06.Защищаем возраст ученика 3/9.3 Свойства.06.Защищаем возраст ученика 3.csproj" Id="d1ae54b0-4d01-45ce-a494-846de7da3c1c" />
   <Project Path="9.3 Свойства.13.Умный дом/9.3 Свойства.13.Умный дом.csproj" Id="ebe3553f-c443-4fc1-a5fc-e0092ae65f8f" />
   <Project Path="9.4 readonly поля.08.Дробь/9.4 readonly поля.08.Дробь.csproj" Id="2d1a0375-9d25-49a7-89ae-10fd2a598f90" />
+  <Project Path="9.4 readonly поля.09.Driver/9.4 readonly поля.09.Driver.csproj" Id="607b41f9-70e2-4d65-aaee-433fce39f5b1" />
   <Project Path="ConsoleApp1/Скобки фигурные и квадратные.csproj" Id="a3959fb7-db03-42f0-863b-79c592cd8e1a" />
   <Project Path="Strings/4.1.Strings.09.Склько раз.csproj" />
 </Solution>
