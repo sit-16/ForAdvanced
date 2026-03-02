@@ -78,6 +78,7 @@
   <Project Path="9.5 Индексаторы.06.Команда/9.5 Индексаторы.06.Команда.csproj" Id="39f906f6-050e-470f-9763-0be8aa23d5ff" />
   <Project Path="9.5 Индексаторы.07.Команда2/9.5 Индексаторы.07.Команда2.csproj" Id="25a5086d-19fa-435c-a90c-68bb4efbd467" />
   <Project Path="9.5 Индексаторы.10.Словарь/9.5 Индексаторы.10.Словарь.csproj" Id="5ae5d057-ff69-4475-892c-7e6b764be2f4" />
+  <Project Path="9.5 Индексаторы.13.Матрица/9.5 Индексаторы.13.Матрица.csproj" Id="62ee5ed8-b094-4187-820f-43b5feebee13" />
   <Project Path="ConsoleApp1/Скобки фигурные и квадратные.csproj" Id="a3959fb7-db03-42f0-863b-79c592cd8e1a" />
   <Project Path="Strings/4.1.Strings.09.Склько раз.csproj" />
 </Solution>
