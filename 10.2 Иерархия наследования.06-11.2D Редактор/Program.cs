@@ -1,32 +1,7 @@
-﻿namespace _10._2_Иерархия_наследования._06_11._2D_Редактор
+﻿//using System.Drawing;
+
+namespace CSharpEsentials2dEditor
 {
-    public class Figure
-    {
-        public int Layer { get; set; }
-        public string EdgeColor { get; set; } = "чёрный";
-        public double EdgeThickness { get; set; } = 1;
-        public string FillColor { get; set; } = "белый";
-    }
-
-    public class Point
-    {
-        public double X_Position { get; set; }
-        public double Y_Position { get; set; }
-    }
-
-
-    public sealed class Circle : Figure
-    {
-        public double Radius { get; set; }
-        public Point Center { get; set; }
-    }
-
-    public sealed class Edge : Figure
-    {
-        public Point FirstPoint { get; set; }
-        public Point SecondPoint { get; set; }
-        public string FillColor { get; } = "чёрный";
-    }
 
 
     internal class Program
@@ -136,6 +111,35 @@
             };
 
             ShowVerticalEdges(edges);
+
+            // 11 Многоугольник
+            Polygon polygon = new Polygon();
+
+            polygon.Layer = 0;
+            polygon.EdgeThickness = 2.4;
+            polygon.EdgeColor = "красный";
+            polygon.FillColor = "белый";
+
+            polygon.Points = new List<Point>() {
+                new Point() {
+                    X_Position = 5.6,
+                    Y_Position = 3.4
+                }, new Point(){
+                    X_Position = 6.7,
+                    Y_Position = 2.4
+                }, new Point() {
+                    X_Position = 5.1,
+                    Y_Position = 2.4
+                },new Point() {
+                    X_Position = 2.2,
+                    Y_Position = 7.1
+                }
+            };
+            foreach (Point p in polygon.Points)
+            {
+                Console.WriteLine($"X:{p.X_Position} Y:{p.Y_Position}");
+            }
+            Console.WriteLine($"Слой:{polygon.Layer}, Цвет границ:{polygon.EdgeColor}, Толщина границ: {polygon.EdgeThickness}, Цвет заливки:{polygon.FillColor}");
         }
         public static void ShowVerticalEdges(Edge[] edges)
         {
