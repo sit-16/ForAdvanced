@@ -154,6 +154,7 @@ namespace CSharpEsentials2dEditor
                 }
             }
             */
+            /*
             var edge = new Edge(1, "красный", 2, "белый", new Point(0, 0), new Point(10, 10));
             var circle = new Circle(2, "синий", 1.5, "жёлтый", new Point(5, 5), 10);
             var polygon = new Polygon(3, "зелёный", 1, "серый", new List<Point> { new Point(0, 0), new Point(5, 0), new Point(5, 5), new Point(0, 5) });
@@ -161,6 +162,27 @@ namespace CSharpEsentials2dEditor
             Console.WriteLine($"{edge.Layer}, {edge.EdgeColor}, {edge.EdgeThickness}, {edge.FillColor}");
             Console.WriteLine($"{circle.Layer}, {circle.EdgeColor}, {circle.EdgeThickness}, {circle.FillColor}");
             Console.WriteLine($"{polygon.Layer}, {polygon.EdgeColor}, {polygon.EdgeThickness}, {polygon.FillColor}");
+            */
+            Circle circle = new Circle(2, "red", 1, "white", new Point(3, 5), 4);
+            Edge edge = new Edge(0, "black", 5.6, "black", new Point(1, 2), new Point(5, -4));
+            Polygon polygon = new Polygon(3, "blue", 6.7, "green", new List<Point> { new Point(2, 3), new Point(5, 6), new Point(4, 5) });
+            Edge edge2 = new Edge(1, "black", 7.8, "black", new Point(2, 3), new Point(4, -6));
+            Circle circle2 = new Circle(9, "yellow", 3, "black", new Point(1, 7), 6);
+
+            Figure nearestFigure = FindNearestFigure(new Figure[] { circle, edge, polygon, edge2, circle2 });
+
+            Console.WriteLine($"Слой:{nearestFigure.Layer}, Цвет границ:{nearestFigure.EdgeColor}, Толщина границ:{nearestFigure.EdgeThickness}, Цвет заливки:{nearestFigure.FillColor}");
+        }
+        public static Figure FindNearestFigure(Figure[] figures)
+        {
+            Figure resultFigure = figures[0];
+            int maxLayer = figures[0].Layer;
+            foreach (Figure f in figures)
+            {
+                if(f.Layer > maxLayer)
+                    resultFigure = f;
+            }
+            return resultFigure;
         }
 
     }
