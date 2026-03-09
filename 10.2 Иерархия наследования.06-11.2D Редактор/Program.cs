@@ -8,6 +8,7 @@ namespace CSharpEsentials2dEditor
     {
         static void Main(string[] args)
         {
+            /*
             // 06 Фигура
             Figure figure = new Figure();
             figure.Layer = 1;
@@ -152,6 +153,14 @@ namespace CSharpEsentials2dEditor
                     Console.WriteLine($"{X1} {Y1} {X2} {Y2}");
                 }
             }
+            */
+            var edge = new Edge(1, "красный", 2, "белый", new Point(0, 0), new Point(10, 10));
+            var circle = new Circle(2, "синий", 1.5, "жёлтый", new Point(5, 5), 10);
+            var polygon = new Polygon(3, "зелёный", 1, "серый", new List<Point> { new Point(0, 0), new Point(5, 0), new Point(5, 5), new Point(0, 5) });
+
+            Console.WriteLine($"{edge.Layer}, {edge.EdgeColor}, {edge.EdgeThickness}, {edge.FillColor}");
+            Console.WriteLine($"{circle.Layer}, {circle.EdgeColor}, {circle.EdgeThickness}, {circle.FillColor}");
+            Console.WriteLine($"{polygon.Layer}, {polygon.EdgeColor}, {polygon.EdgeThickness}, {polygon.FillColor}");
         }
 
     }
