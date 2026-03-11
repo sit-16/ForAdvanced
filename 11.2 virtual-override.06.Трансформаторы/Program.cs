@@ -18,29 +18,51 @@
         }
     }
 
-    public class SquareSummator: Summator
+    public class PowerSummator : Summator
     {
+        public int P { get; set; }
+        public PowerSummator(int p)
+        {
+            P = p;
+        }
         protected override int Transform(int item)
         {
-            return item * item;
+            int result = 1;
+            for (int i = 0; i < P; i++)
+                result *= item;
+            return result;
         }
     }
 
-    public class CubeSummator: Summator
+    public class SquareSummator: PowerSummator
     {
-        protected override int Transform(int item)
+        public SquareSummator():base(2)
         {
-            return item * item * item;
+            
         }
     }
+
+    public class CubeSummator: PowerSummator
+    {
+        public CubeSummator() : base(3)
+        {
+
+        }
+    }
+
 
     internal class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine(new Summator().Sum(5));
+            Console.WriteLine(new PowerSummator(1).Sum(5));
+
             Console.WriteLine(new SquareSummator().Sum(5));
+            Console.WriteLine(new PowerSummator(2).Sum(5));
+
             Console.WriteLine(new CubeSummator().Sum(5));
+            Console.WriteLine(new PowerSummator(3).Sum(5));
         }
     }
 }
