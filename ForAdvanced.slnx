@@ -10,6 +10,7 @@
   <Project Path="11.1 Upcast, DownCast.14.FindCircles/11.1 Upcast, DownCast.14.FindCircles.csproj" />
   <Project Path="11.2 virtual-override.05.Даты/11.2 virtual-override.05.Даты.csproj" Id="3e0ac603-52d3-4635-af06-1cf11753f536" />
   <Project Path="11.2 virtual-override.06.Трансформаторы/11.2 virtual-override.06.Трансформаторы.csproj" Id="bca82d76-c54c-4ca5-b22e-0f4df98dfabc" />
+  <Project Path="11.2 virtual-override.08.hh.ru/11.2 virtual-override.08.hh.ru.csproj" Id="b7a33bd7-a953-4003-b64a-3a8dff92cf4d" />
   <Project Path="11.2 virtual-override/11.2 virtual-override.csproj" Id="b3fc84ff-2ded-4ad7-8555-400f33445b82" />
   <Project Path="4.1.10.Одинаковые соседи/4.1.Strings.10.Одинаковые соседи.csproj" />
   <Project Path="4.2.3.Цифра/4.2.Символы (сhar).03.Цифра.csproj" />
