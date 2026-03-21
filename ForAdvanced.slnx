@@ -28,6 +28,7 @@
   <Project Path="12.4 Файловая система.12.File/12.4 Файловая система.12.File.csproj" Id="bc236371-bb31-4cc6-be51-171abc50c09b" />
   <Project Path="12.4 Файловая система.13.File.Чтение и запись/12.4 Файловая система.13.File.FileStream.csproj" Id="4784d6b5-b24f-4905-b91d-b5beb3756fc4" />
   <Project Path="12.4 Файловая система.13.File.Чтение и запись2/12.4 Файловая система.13.File.StreamWriter.csproj" Id="d913e950-4a8e-485d-974c-73b44a2460e6" />
+  <Project Path="12.4 Файловая система.15.File.Задача/12.4 Файловая система.15.File.Задача.csproj" Id="ccb3b759-da56-45b8-bd77-6fb31f2c6ab2" />
   <Project Path="4.1.10.Одинаковые соседи/4.1.Strings.10.Одинаковые соседи.csproj" />
   <Project Path="4.2.3.Цифра/4.2.Символы (сhar).03.Цифра.csproj" />
   <Project Path="4.2.Символы (сhar).06.Изменить регистр символа/4.2.Символы (сhar).06.Изменить регистр символа.csproj" />
