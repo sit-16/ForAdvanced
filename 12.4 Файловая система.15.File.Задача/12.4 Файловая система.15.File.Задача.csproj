@@ -8,4 +8,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\10.1 Наследование.06.Создание объекта\10.1 Наследование.06.Создание объекта.csproj" />
+  </ItemGroup>
+
 </Project>
