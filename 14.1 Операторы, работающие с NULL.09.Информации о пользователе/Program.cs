@@ -24,7 +24,7 @@
     {
         public static void Main()
         {
-            UserProfile usProf = new UserProfile("Алина") { Gender = "Жен" };
+            var usProf = new UserProfile("Алина") { Gender = "Жен" };
             usProf.DisplayUserInfo();
         }
     }
