@@ -1,0 +1,75 @@
+﻿namespace CSharpEssentials
+{
+    delegate void Rule(User user);
+    public class User
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+
+        public User(string name, int age)
+        {
+            Name = name;
+            Age = age;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name}, {Age}";
+        }
+    }
+
+    class Program
+    {
+        // шаблон правила
+        delegate void Rule(User user);
+
+        // правило-метод LongNameRule
+        private static void LongNameRule(User user)
+        {
+            // добавьте реализацию
+            if (user.Name.Length > 10)
+                user.Name = user.Name.Substring(0, 10);
+        }
+        private static void IncreaseAge(User user)
+        {
+            // добавьте реализацию
+            user.Age++;
+        }
+
+        private static List<User> TransformUsersByRule(List<User> users, Rule rule)
+        {
+            // добавьте реализацию
+            List<User> resultList= new List<User>();
+            foreach (var user in users)
+                rule.Invoke(user);
+            return users;
+        }
+
+        static void Main()
+        {
+            List<User> users = new List<User>
+            {
+                new User("namenamename", 25),
+                new User("1234567890", 34),
+                new User("123456", 14),
+            };
+
+            //List<User> transformedUsers = TransformUsersByRule(users, LongNameRule);
+            //transformedUsers = TransformUsersByRule(users, IncreaseAge);
+
+            var rule = new Rule(LongNameRule);
+            rule += IncreaseAge;
+
+            List<User> transformedUsers = TransformUsersByRule(users, rule);
+
+
+
+
+            foreach (var user in transformedUsers)
+            {
+                Console.WriteLine(user);
+            }
+        }
+    }
+}
+
